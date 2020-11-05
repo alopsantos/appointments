@@ -5,10 +5,10 @@ import express, { Request, Response, NextFunction} from 'express';
 import 'express-async-errors';
 
 import routes from './routes';
-import uploadConfig from './config/upload';
+import uploadConfig from '@config/upload';
 
-import './database';
-import AppError from './erros/AppError';
+import '@shared/infra/typeorm';
+import AppError from '@shared/erros/AppError';
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.use((err: Error, request:Request, response:Response, _:NextFunction) => {
   }
   return response.status(500).json({
     status: 'error',
-    message: 'Internal Server error',
+    message: `Internal Server error ${err.message}`,
   });
 });
 
