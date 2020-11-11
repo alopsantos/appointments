@@ -1,17 +1,17 @@
 {
   "type": "postgres",
-	"host": "192.168.1.10",
+	"host": "ruby.db.elephantsql.com",
   "port": 5432,
-  "username": "username",
-  "password": "password",
-  "database": "database",
+  "username": "hscqyvuz",
+  "password": "rS7X6YazYD7WPlt_9or7vXorZq1QQes-",
+  "database": "hscqyvuz",
   "entities": [
-    "./src/models/*.ts"
+    "./src/models/**/infra/typeorm/entities/*.ts"
   ],
   "migrations": [
-    "./src/database/migrations/*.ts"
+    "./src/shared/infra/typeorm/migrations/*.ts"
   ],
   "cli":{
-    "migrationsDir": "./src/database/migrations"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations"
   }
 }
