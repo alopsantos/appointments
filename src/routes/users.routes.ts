@@ -10,7 +10,7 @@ const usersRouter = Router();
 const upload = multer(uploadConfig);
 
 usersRouter.get('/', async (request, response) =>{
-  return response.json({'Mensagem': 'Ok'});
+  return response.json({'Mensagem': 'Users ok'});
 });
 usersRouter.post('/', async (request, response) => {
   const { name, email, password } = request.body;
