@@ -12,6 +12,7 @@ export default class ProvidersController {
       user_id
     });
 
+    console.log('ProvidersControllers');
     return response.json(providers);
   }
 }
