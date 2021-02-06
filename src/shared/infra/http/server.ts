@@ -32,6 +32,11 @@ app.use((err: Error, request:Request, response:Response, _:NextFunction) => {
   });
 });
 
+<<<<<<< HEAD
 app.listen(process.env.API_PORT, ()=> {
   console.log(`🚀 Server Started on port ${process.env.API_PORT}!`)
+=======
+app.listen(process.env.APP_PORT, ()=> {
+  console.log(`🚀 Server Started on port ${process.env.APP_PORT}!`)
+>>>>>>> 131d4ab427c9447db1b55f4cc7e2a1af07a3e8db
 });
