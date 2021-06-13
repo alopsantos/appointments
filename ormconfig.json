@@ -6,12 +6,12 @@
   "password": "rS7X6YazYD7WPlt_9or7vXorZq1QQes-",
   "database": "hscqyvuz",
   "entities": [
-    "./dist/models/*.js"
+    "./src/models/*.ts"
   ],
   "migrations": [
-    "./dist/database/migrations/*.js"
+    "./src/database/migrations/*.ts"
   ],
   "cli":{
-    "migrationsDir": "./dist/database/migrations"
+    "migrationsDir": "./src/database/migrations"
   }
 }

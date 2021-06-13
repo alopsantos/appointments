@@ -1,0 +1,23 @@
+
+POST http://localhost:3333/depositos/
+Content-Type: application/json
+
+{
+  "cliente": "Anderson Lopes",
+  "valor": "23000",
+  "banco": "Pix",
+  "date": "2021-06-13",
+  "provider_id": "acab26ce-191a-4ad7-8b51-3efe10ab73a4"
+}
+
+###
+GET http://localhost:3333/depositos
+
+###
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "suporte@estacaodamodastore.com.br",
+  "password": "12345"
+}
