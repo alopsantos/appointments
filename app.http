@@ -3,15 +3,16 @@ POST http://localhost:3333/depositos/
 Content-Type: application/json
 
 {
-  "cliente": "Anderson Lopes",
-  "valor": "23000",
-  "banco": "Pix",
-  "date": "2021-06-13",
-  "provider_id": "acab26ce-191a-4ad7-8b51-3efe10ab73a4"
+  "cliente": "Anna",
+  "valor": "16133",
+  "banco": "PicPay",
+  "date": "2021-06-11",
+  "status": "0",
+  "provider_id": "3456be7c-5a89-4b94-a128-57e1a960613d"
 }
 
 ###
-GET http://localhost:3333/depositos
+GET http://localhost:3333/depositos/
 
 ###
 POST http://localhost:3333/sessions
@@ -21,3 +22,6 @@ Content-Type: application/json
   "email": "suporte@estacaodamodastore.com.br",
   "password": "12345"
 }
+
+###
+GET http://localhost:3333/appointments

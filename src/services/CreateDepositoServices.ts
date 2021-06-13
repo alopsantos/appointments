@@ -7,15 +7,16 @@ interface IDeposito{
   valor: number,
   date: Date,
   banco: string,
+  status: number,
 }
 
 class CreateDepositoServices{
-  public async execute({ provider_id, cliente, valor, date, banco }: IDeposito): Promise<Deposito>{
+  public async execute({ provider_id, cliente, valor, date, status, banco }: IDeposito): Promise<Deposito>{
 
     const depositoRepository = getRepository(Deposito);
 
     const deposito = depositoRepository.create({
-      cliente, valor, banco, date, provider_id
+      cliente, valor, banco, date, status, provider_id
     })
     await depositoRepository.save(deposito);
 

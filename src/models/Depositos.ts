@@ -21,6 +21,9 @@ class Deposito {
   valor: number;
 
   @Column()
+  status: number;
+
+  @Column()
   banco: string;
 
   @Column('time with time zone')

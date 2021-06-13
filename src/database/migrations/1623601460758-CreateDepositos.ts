@@ -44,6 +44,11 @@ export class createDepositos1623601460758 implements MigrationInterface {
             isNullable: false,
           },
           {
+            name: 'status',
+            type: 'int',
+            isNullable: false,
+          },
+          {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()',
