@@ -7,24 +7,9 @@ import { uuid } from 'uuidv4';
 class FakeUserRepository implements IUsersRepository {
   private users: User[] = [];
 
-  // public async findAllProviders({
-  //   except_user_id,
-  // }: IFindAllProvidersDTO): Promise<void> {
-
-
-  //   if (except_user_id) {
-  //     users = await this.ormRepository.find({
-  //       where: {
-  //         id: Not(except_user_id),
-  //       },
-  //     });
-  //   } else {
-  //     users = await this.ormRepository.find();
-  //   }
-
-  //   return users;
-  // }
-
+  public async findAllProviders({user_id}: any): Promise<User[]>{
+    return user_id;
+  }
   public async findById(id: string): Promise<User | undefined> {
     const findUser = this.users.find(user => user.id === id);
     return findUser;
